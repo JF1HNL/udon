@@ -7,7 +7,7 @@
   <title>うどん食べたい</title>
 </head>
 <body>
-  <input type="button" value="うどんたべたい">
+  <input type="button" value="うどんたべたい" onclick="button_click()">
   <script>
     const content = {
       url: window.location.href,
@@ -20,10 +20,12 @@
     const tweeturl = `https://twitter.com/intent/tweet?url=${content.url}&text=${
       content.text
     }&hashtags=${content.tag}`;
-    if(window.open(tweeturl,"_blank")){
-    }else{
-      window.location.href = tweeturl;
-    }  
+    function button_click(){
+      if(window.open(tweeturl,"_blank")){
+      }else{
+        window.location.href = tweeturl;
+      }
+    }
   </script>
 </body>
 </html>

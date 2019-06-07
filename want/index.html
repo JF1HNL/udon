@@ -20,7 +20,10 @@
     const tweeturl = `https://twitter.com/intent/tweet?url=${content.url}&text=${
       content.text
     }&hashtags=${content.tag}`;
-    location.href = tweeturl;      
+    if(window.open(tweeturl,"_blank")){
+    }else{
+      window.location.href = tweeturl;
+    }  
   </script>
 </body>
 </html>
